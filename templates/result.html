@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-"></link>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+        }
+        .prediction {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .sad-icon {
+            color: lightcoral; /* Set the color to blue */
+            font-size: 78px; /* Set the font size to 48px */
+        }
+        .happy-icon {
+            color: violet; /* Set the color to green */
+            font-size: 78px; /* Set the font size to 48px */
+        }
+    </style>
+</head>
+<body>
+    <h2>Sentiment Analysis</h2>
+    <div class="prediction">
+        <p>Predicted sentiment: {{ result }}</p>
+        {% if result == 'Positive' %}
+            <i class="fas fa-smile-beam happy-icon"></i> <!-- Font Awesome smiley face icon -->
+        {% elif result == 'Negative' %}
+            <i class="fas fa-face-sad-tear sad-icon"></i> <!-- Font Awesome disappointed face icon -->
+        {% endif %}
+    </div>
+</body>
+</html>
